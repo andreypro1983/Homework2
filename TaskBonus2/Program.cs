@@ -60,7 +60,7 @@ double FindAverageArray(int[] inputArray)  // нахождение средне�
     }
     return Convert.ToDouble(sum) / Convert.ToDouble(inputArray.Length);
 }
-void PrintResultCompareEvenAndNotEvenAverages (double evenAverage,double notEvenAverage)
+void PrintResultCompareEvenAndNotEvenAverages (double evenAverage,double notEvenAverage) // вывод результата сравнения средних арифметический значений элементов массивов с чётными и нечетными числами
 {
    if(evenAverage==notEvenAverage)  Console.WriteLine("средн. арифм. значений элементов массива с чётными числами = средн. арифм. значений элементов с нечётными числами");
    else if(evenAverage>notEvenAverage) Console.WriteLine("средн. арифм. значений элементов массива с чётными числами > средн. арифм. значений элементов с нечётными числами");
