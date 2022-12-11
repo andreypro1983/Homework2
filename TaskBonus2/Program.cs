@@ -60,6 +60,15 @@ double FindAverageArray(int[] inputArray)  // нахождение средне�
     }
     return Convert.ToDouble(sum) / Convert.ToDouble(inputArray.Length);
 }
+void PrintResultCompareEvenAndNotEvenAverages (double evenAverage,double notEvenAverage)
+{
+   if(evenAverage==notEvenAverage)  Console.WriteLine("средн. арифм. значений элементов массива с чётными числами = средн. арифм. значений элементов с нечётными числами");
+   else if(evenAverage>notEvenAverage) Console.WriteLine("средн. арифм. значений элементов массива с чётными числами > средн. арифм. значений элементов с нечётными числами");
+   else Console.WriteLine("средн. арифм. значений элементов массива с чётными числами < средн. арифм. значений элементов с нечётными числами");
+
+}
+
+
 
 Console.Clear();
 Console.WriteLine("Введите размерность массива: ");
@@ -73,4 +82,6 @@ Console.WriteLine($"Полученный массив: [{String.Join(", ", newAr
 
 // Console.WriteLine ($"Длина четного массива{FindEvenArrayLenght(newArray, true).Item1}");
 // Console.WriteLine ($"Длина нечетного массива{FindEvenArrayLenght(newArray, false).Item1}");
-Console.WriteLine($"Разница между средними арифметическими массивов четных и нечетных чисел равна {FindAverageArray(GetArrayEvenOrNotEvenNumbersFromArray(newArray, FindEvenArrayLenght(newArray, true).Item1, FindEvenArrayLenght(newArray, true).Item2)) - FindAverageArray(GetArrayEvenOrNotEvenNumbersFromArray(newArray, FindEvenArrayLenght(newArray, false).Item1, FindEvenArrayLenght(newArray, false).Item2))}");
+// Console.WriteLine($"Разница между средними арифметическими массивов четных и нечетных чисел равна {FindAverageArray(GetArrayEvenOrNotEvenNumbersFromArray(newArray, FindEvenArrayLenght(newArray, true).Item1, FindEvenArrayLenght(newArray, true).Item2)) - FindAverageArray(GetArrayEvenOrNotEvenNumbersFromArray(newArray, FindEvenArrayLenght(newArray, false).Item1, FindEvenArrayLenght(newArray, false).Item2))}");
+
+PrintResultCompareEvenAndNotEvenAverages(FindAverageArray(GetArrayEvenOrNotEvenNumbersFromArray(newArray, FindEvenArrayLenght(newArray, true).Item1, FindEvenArrayLenght(newArray, true).Item2)),FindAverageArray(GetArrayEvenOrNotEvenNumbersFromArray(newArray, FindEvenArrayLenght(newArray, false).Item1, FindEvenArrayLenght(newArray, false).Item2)));
