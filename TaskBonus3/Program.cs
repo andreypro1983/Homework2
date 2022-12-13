@@ -63,7 +63,7 @@ int arrMinValue = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите максимальное значение массива: ");
 int arrMaxValue = Convert.ToInt32(Console.ReadLine());
 Console.Write("Сдвигаем массив на 1 влево(отвечаем 'Да') или на 1 вправо (отвечаем 'Нет'): ");
-string moveLeft = Console.ReadLine();
+string? moveLeft = Console.ReadLine();  // знак ? после string позволяет хранить переменной значение null
 if (String.IsNullOrEmpty(moveLeft)|| (moveLeft.ToLower() != "да"&& moveLeft.ToLower() != "нет"))
 {
     Console.WriteLine("Не корректно введен ответ на последний запрос. Работа задачи будет завершена");
